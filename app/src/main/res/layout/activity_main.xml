@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="air.smart_print_c.MainActivity">
+    <include
+        layout="@layout/toolbar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:paddingTop="50dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="true"
+            android:columnCount="2"
+            android:useDefaultMargins="false">
+
+            <RadioGroup
+                android:id="@+id/scan_by_radioGroup"
+                android:layout_width="191dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="0dp"
+                android:layout_row="7">
+
+                <RadioButton
+                    android:id="@+id/sht_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/Radio_sht" />
+
+                <RadioButton
+                    android:id="@+id/qr_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Radio_qr" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/Button_scan_cena"
+                android:layout_width="190dp"
+                android:layout_height="60dp"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:layout_row="6"
+                android:onClick="scan"
+                android:text="@string/Button_scan_c" />
+
+            <TextView
+                android:id="@+id/label_ser_cap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_row="2"
+                android:text="@string/label_server_ip" />
+
+            <TextView
+                android:id="@+id/label_server_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_row="2"
+                android:text="" />
+
+            <ListView
+                android:id="@+id/list_print_listView"
+                android:layout_width="187dp"
+                android:layout_height="294dp"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="9"
+                android:choiceMode="singleChoice"
+                android:drawSelectorOnTop="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true" />
+
+            <TextView
+                android:id="@+id/label_scan_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="7"
+                android:text="@string/label_scan_by" />
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="9"
+                android:text="@string/Button_delete_cap" />
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:layout_row="8"
+                android:layout_rowWeight="1"
+                android:text="@string/Button_clear_cap" />
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:layout_row="8"
+                android:layout_rowWeight="1"
+                android:text="@string/Button_send_cap" />
+
+            <Button
+                android:id="@+id/Scanner_button"
+                android:layout_width="190dp"
+                android:layout_height="60dp"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:layout_row="5"
+                android:onClick="scan"
+                android:text="@string/Button_scan_cap" />
+
+            <Button
+                android:id="@+id/Add_element_button"
+                android:layout_width="190dp"
+                android:layout_height="60dp"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:layout_row="5"
+                android:text="@string/Button_add_cap" />
+
+            <TextView
+                android:id="@+id/Label_art_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="3"
+                android:text="@string/label_art_cap" />
+
+            <EditText
+                android:id="@+id/Art_editText"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:layout_row="3"
+                android:ems="10"
+                android:focusableInTouchMode="true"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/Label_shtrih_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="4"
+                android:text="@string/label_Shtrih_cap" />
+
+            <EditText
+                android:id="@+id/Shtrih_editText"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:layout_row="4"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:focusableInTouchMode="true"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions"
+                android:maxLength="22"
+                android:singleLine="true" />
+
+            <RadioGroup
+                android:id="@+id/shablon_radioGroup"
+                android:layout_width="191dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="0dp"
+                android:layout_row="6">
+
+                <RadioButton
+                    android:id="@+id/sh1_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/Radio_10х5" />
+
+                <RadioButton
+                    android:id="@+id/sh2_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Radio_70х40" />
+
+                <RadioButton
+                    android:id="@+id/sh3_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Radio_80х55" />
+
+            </RadioGroup>
+
+        </GridLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
